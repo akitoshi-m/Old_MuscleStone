@@ -2,18 +2,28 @@
   <div class="container top-container">
     <h1 class="text-white">MuscleStone</h1>
     <h2 class="text-white">筋トレとは終わりなき修行である。</h2>
-    <h2 class="text-white">定量的なゴールは存在せず全てが通過点である。</h2>
+    <h2 class="text-white">定量的なゴールは存在せず</h2>
+    <h2 class="text-white">全てが通過点である。</h2>
     <h2 class="text-white">故に日々のトレーニングは終わりない目標までのマイルストーンなのである。</h2>
-    <h2 class="text-white">常に高みを目指す、そんな貴方へ向けた筋トレのマイルストーン管理アプリ</h2>
-    <h2 class="text-white">「MuscleStone」です。</h2>
+    <h2 class="text-white">常に高みを目指す、そんな貴方へ向けた筋トレのマイルストーン管理アプリです。</h2>
     <div class="col-md-3">
-      <%= link_to "アカウント登録", 'new_user_path', class: 'btn btn-block btn-white' %>
+      <%= link_to "アカウント登録", '/users/new', class: 'btn btn-block btn-white' %>
     </div>
     <div class="col-md-3">
-      <%= link_to "ログイン", '#', class: 'btn btn-block btn-white' %>
+      <%= link_to "ログイン", 'sessions/new', class: 'btn btn-block btn-white' %>
     </div>
     <div class="col-md-3">
       <%= link_to "twitterアカウントで登録&ログイン", '#', class: 'btn btn-block btn-white' %>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <div class="footer-list">
+      <ul>
+        <li>フッター要素1</li>
+        <li>フッター要素2</li>
+        <li>フッター要素3</li>
+      </ul>
     </div>
   </div>
 </div>

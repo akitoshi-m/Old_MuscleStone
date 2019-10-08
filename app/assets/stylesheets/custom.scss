@@ -1,3 +1,9 @@
+.footer li {
+  font-size:15px;
+  color: #fff;
+  list-style: none;
+}
+
 h1, h2 {
   font-weight: 100;
 }
@@ -21,13 +27,13 @@ h1, h2 {
 
 .top-wrapper {
   width: 100vw;
-  height: 100vh;
-  //background-image: url('bg-top.png');
+  //height: 100vh;
+  //background-image: url('画像を入れたい時はここに入れる');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
+  background-color: rgba(255,0,0,0.75);
 }
 
 .top-container {
@@ -70,4 +76,41 @@ h1, h2 {
   position: fixed;
   width: 100%;
   z-index: 10000;
+}
+
+.navbar-transparent {
+  font-size: 30px;
+  margin-bottom: 0px;
+  background-color: rgba(255,255,255,0.5);
+  a {
+    color: #f00 !important;
+  }
+
+
+  .navbar-brand {
+    padding: 0px;
+    margin-top: 15px;
+  }
+
+  .li {
+  font-size:15px;
+  color: blue;
+  }
+}
+
+.btn-black {
+  color: #565656;
+  border: 1px solid #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+  &:hover {
+    color: #565656;
+  }
+}
+
+.topic-new-wrapper {
+  padding-top: 120px;
 }
