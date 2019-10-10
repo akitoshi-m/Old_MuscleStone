@@ -13,15 +13,16 @@ class SessionsController < ApplicationController
       flash.now[:danger] = 'ログインに失敗しました'
       render :new
     end
-    
-    private
-    def session_params
-      params.require(:session).permit(:email, :password)
-    end
-    
-    #log_inメソッドでsession[:user_id]にログイン情報を保存
-    def log_in(user)
-      session[:user_id] = user.id
-    end
   end
+  
+  private
+  def session_params
+    params.require(:session).permit(:email, :password)
+  end
+    
+  #log_inメソッドでsession[:user_id]にログイン情報を保存
+  def log_in(user)
+    session[:user_id] = user.id
+  end
+
 end

@@ -1,4 +1,8 @@
 class WorkoutsController < ApplicationController
+  def index
+    @workouts = Workout.all
+  end
+
   def new
     @workout = Workout.new
   end
@@ -9,7 +13,7 @@ class WorkoutsController < ApplicationController
     if @workout.save
       redirect_to workouts_path, success: "投稿に成功しました"
     else
-      flash.new[:danger] = "投稿に失敗しました"
+      flash.now[:danger] = "投稿に失敗しました"
       render :new
     end
   end

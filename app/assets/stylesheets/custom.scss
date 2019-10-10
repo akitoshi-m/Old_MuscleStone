@@ -91,12 +91,12 @@ h1, h2 {
     padding: 0px;
     margin-top: 15px;
   }
-
-  .li {
-  font-size:15px;
-  color: blue;
-  }
 }
+
+.navbar-right li {
+  font-size:30px;
+  }
+
 
 .btn-black {
   color: #565656;
@@ -111,6 +111,50 @@ h1, h2 {
   }
 }
 
-.topic-new-wrapper {
+.workout-new-wrapper {
   padding-top: 120px;
+}
+
+.workout-index-wrapper {
+  padding-top: 70px;
+  background-color: #fafafa;
+  .workout-index-single { //投稿の箱
+    background-color: #ff0; //黄色
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .workout-author { //投稿したユーザー名
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .workout-text { //投稿したテキスト内容
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    img { //写真に対して
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .workout-index-icon { //いいねとコメントアイコン
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.user-show-wrapper { //ユーザー詳細ページ
+  .user-index-single {
+  
+    img { //アイコン
+      height: 300px;
+      width: 300px;
+    }
+  }
 }
