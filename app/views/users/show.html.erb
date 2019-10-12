@@ -8,14 +8,14 @@
         <div class="user-icon">
 
         </div>
-        <%= link_to "users/edit" do %>
+        <%= link_to edit_user_path(current_user) do %>
         <div class="edit-btn">編集</div>
         <% end %>
         <div class="user-data">
-          <p>名前：</p>
-          <p>身長</p>
-          <p>体重</p>
-          <p>BMI</p>
+          <p>名前：<%= @user.name %></p>
+          <p>身長：<%= @user.height %></p>
+          <p>体重：<%= @user.weight %></p>
+          <p>BMI：</p>
         </div>
         
       </div>
