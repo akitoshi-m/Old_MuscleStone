@@ -19,15 +19,15 @@
     
     <nav class="navbar navbar-default navbar-fixed navbar-transparent">
       <div class="container">
-        <ul class="nav navbar-nav navbar-left">
-          <li>
-            <%= link_to root_path do %>
-              <span><i class="fab fa-gripfire">MuscleStone</i></span>
-            <% end %>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <% if logged_in? %>
+        <% if logged_in? %>
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <%= link_to workouts_path do %>
+                <span><i class="fab fa-gripfire">MuscleStone</i></span>
+              <% end %>
+            </li>
+          </ul>  
+          <ul class="nav navbar-nav navbar-right">
             <li>
               <%= link_to "#" do %>
                 <span><i class="fas fa-heart">いいね一覧</i></span>
@@ -48,7 +48,14 @@
                 <span><i class="fas fa-user-circle">マイページ</i></span>
               <% end %>
             </li>
-
+          <% else %>
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <%= link_to root_path do %>
+                <span><i class="fab fa-gripfire">MuscleStone</i></span>
+              <% end %>
+            </li>
+          </ul>
           <% end %>
         </ul>
       </div>
