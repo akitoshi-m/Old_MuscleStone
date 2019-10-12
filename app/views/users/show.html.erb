@@ -1,19 +1,67 @@
-<h1>戻るボタンを作りたい</h1>
+<span><i class="fas fa-arrow-left"></i></span>
 <h1>ユーザー詳細ページ</h1>
-<div class="user-show-wrapper">
+<div class="user-top-wrapper">
   <div class="container">
+    
     <div class="row">
       <div class="col-md-11 col-md-offset-1">
-        <div class="user-index-single">
-          <%= image_tag 'icons/dumbell.jpg',  class: 'user-index-icon' %>
-          <%= image_tag 'icons/calender.jpg', class: 'user-index-icon' %>
-          <%= image_tag 'icons/graph.jpg',    class: 'user-index-icon' %>
+        <div class="user-icon">
 
-            <p class="workout-text">
-              ここにユーザーの投稿を一覧表示する
-            </p>
+        </div>
+        <%= link_to "users/edit" do %>
+        <div class="edit-btn">編集</div>
+        <% end %>
+        <div class="user-data">
+          <p>名前：</p>
+          <p>身長</p>
+          <p>体重</p>
+          <p>BMI</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="user-data-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="user-heading">
+        <div class="col-md-11 col-md-offset-1">
+          <p>ここにマイデータという文字表記をする</p>
+        </div>
+        <div class="menu-heading">
+          <div class="col-md-11 col-md-offset-1">
+            <p class="training-menu">トレーニングメニュー</p>
+            <p class="calender">カレンダー</p>
+            <p class="graph">グラフ</p>
+            <%= link_to "#" do %> 
+              <%= image_tag 'icons/dumbell.jpg' %>
+            <% end %>
+            <%= link_to "#" do %>
+              <%= image_tag 'icons/calender.jpg' %>
+            <% end %>
+            <%= link_to "#" do %>
+              <%= image_tag 'icons/graph.jpg' %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="user-index-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="user-index-wrapper">
+          <p class="workout-index">
+            ここにユーザーの投稿を一覧表示する
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
