@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -19,15 +19,18 @@
     
     <nav class="navbar navbar-default navbar-fixed navbar-transparent">
       <div class="container">
-        <%= link_to root_path do %>
-          <span><i class="fab fa-gripfire">MuscleStone</i></span>
-        <% end %>
-        
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <%= link_to root_path do %>
+              <span><i class="fab fa-gripfire">MuscleStone</i></span>
+            <% end %>
+          </li>
+        </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
               <%= link_to "#" do %>
-                <span><i class="far fa-clock">タイマー</i></span>
+                <span><i class="fas fa-clock">タイマー</i></span>
               <% end %>
             </li>
             <li>
@@ -36,7 +39,7 @@
               <% end %>
             </li>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to user_path(current_user.id) do %>
                 <span><i class="fas fa-user-circle">マイページ</i></span>
               <% end %>
             </li>

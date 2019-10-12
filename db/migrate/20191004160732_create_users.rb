@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :weight
       t.string :user_id
       t.string :bmi
+      t.string :image_name
 
       
       t.timestamps

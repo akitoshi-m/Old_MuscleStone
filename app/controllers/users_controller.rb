@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
     
   def create
-    @user = User.new(user_params)
+    @user = User.new(user_params, image_name: "default-user.jpeg")
     if @user.save
       redirect_to root_path, success: '登録ができました'
     else
