@@ -23,7 +23,7 @@
             <% end %>
             
             <%= workout.like_users.count %> <!-- 各投稿のいいね数を表示 -->
-            <%= link_to "#" do %>
+            <%= link_to comments_new_path(workout_id: workout.id), method: :get do %>
               <i class="far fa-comment"></i>
             <% end %>
           </div>
