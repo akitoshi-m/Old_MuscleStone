@@ -8,11 +8,16 @@ class SessionsController < ApplicationController
     #「該当のメールアドレスを持つuserが存在している、かつuserのパスワードが正しい」場合true
     if user && user.authenticate(session_params[:password])
       log_in user
-      redirect_to root_path, success: 'ログインに成功しました'
+      redirect_to workouts_path, success: 'ログインに成功しました'
     else
       flash.now[:danger] = 'ログインに失敗しました'
       render :new
     end
+  end
+  
+  def destroy
+    log_out
+    redirect_to root_path, info: 'ログアウトしました'
   end
   
   private
@@ -24,5 +29,9 @@ class SessionsController < ApplicationController
   def log_in(user)
     session[:user_id] = user.id
   end
-
+  #session.deleteメソッドでSessionを削除
+  def log_out
+    session.delete(:user_id) #セッションに保存されているuser_idを削除
+    @current_user = nil #current_userを削除
+  end
 end

@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params, image_name: "default-user.jpeg")
     if @user.save
-      redirect_to root_path, success: '登録ができました'
+      redirect_to workouts_path, success: '登録ができました'
     else
       flash.now[:danger] = "登録に失敗しました"
       render :new

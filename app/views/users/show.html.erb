@@ -9,7 +9,10 @@
 
         </div>
         <%= link_to edit_user_path(current_user) do %>
-        <div class="edit-btn">編集</div>
+          <div class="edit-btn">編集</div>
+        <% end %>
+        <%= link_to logout_path, method: :delete do %>
+          <div cladd="logout-btn">ログアウト</div>
         <% end %>
         <div class="user-data">
           <p>名前：<%= @user.name %></p>
@@ -36,13 +39,13 @@
             <p class="calender">カレンダー</p>
             <p class="graph">グラフ</p>
             <%= link_to "#" do %> 
-              <%= image_tag 'icons/dumbell.jpg' %>
+              <%= image_tag 'icons/f_dumbbell.jpg' %>
             <% end %>
             <%= link_to "#" do %>
-              <%= image_tag 'icons/calender.jpg' %>
+              <%= image_tag 'icons/f_note.jpg' %>
             <% end %>
             <%= link_to "#" do %>
-              <%= image_tag 'icons/graph.jpg' %>
+              <%= image_tag 'icons/f_graph.jpg' %>
             <% end %>
           </div>
         </div>
