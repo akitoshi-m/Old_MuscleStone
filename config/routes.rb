@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :users
   resources :workouts
   
-  get  'likes/index' #投稿一覧ページ
-  post '/likes', to: 'likes#create' #いいね作成
+  get    'likes/index' #投稿一覧ページ
+  post   '/likes', to: 'likes#create'  #いいね作成
+  delete '/likes', to: 'likes#destroy' #いいね解除
 end

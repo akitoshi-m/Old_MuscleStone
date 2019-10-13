@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   def index
-    @workouts = Workout.all
+    @workouts = Workout.all.includes(:like_users) #指定したモデルのデータを一括で取得しキャッシュしておく
   end
 
   def new
