@@ -1,0 +1,20 @@
+<div class="workout-index-wrapper">
+  <div class="container">
+    <% @like_workouts.each do |workout| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="workout-index-single">
+            <h2 class="workout-author">
+              <%= workout.user.name %>
+            </h2>
+            <%#= image_tag workout.image.url %>
+            <i class="far fa-comment", class: 'workout-index-icon'></i>
+            <p class='workout-text'>
+              <%= workout.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
