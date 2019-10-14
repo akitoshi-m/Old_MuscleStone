@@ -30,6 +30,14 @@
             <%= link_to comments_new_path(workout_id: workout.id), method: :get do %>
               <i class="far fa-comment"></i>
             <% end %>
+            <h4 class="workout-text">
+              コメント
+            </h4>
+            <p class="workout-text">
+              <% workout.comments.each do |comment| %>
+                <p><%= comment.content %></p>
+              <% end %>
+            </p>
           </div>
         </div>
       </div>
