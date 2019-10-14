@@ -1,33 +1,38 @@
 <div class="workout-show-wrapper">
   <div class="container">
-    <h1 class="users-heading">投稿詳細ページ</h1>
+    <h1 class="users-heading">投稿詳細ページ<%= @id %></h1>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="workout-show-single">
             <h2 class="workout-author">
-              <%= workout.user.name %>
+              <%= @workout.user.name %>
             </h2>
             <p class="workout-text">
-              <%= workout.description %>
+              <%= @workout.description %>
             </p>
             
-            <% if !workout.like_users.include?(current_user) %>
-              <%= link_to likes_path(workout_id: workout.id), method: :post do %>
+            <% if !@workout.like_users.include?(current_user) %>
+              <%= link_to likes_path(id: @workout.id), method: :post do %>
                 <i class="far fa-heart like-btn" ></i>
               <% end %>
             <% else %>
-              <%= link_to likes_path(workout_id: workout.id), method: :delete do %>
+              <%= link_to likes_path(id: @workout.id), method: :delete do %>
                 <i class="fas fa-heart unlike-btn"></i>
               <% end %>
             <% end %>
             
-            <%= workout.like_users.count %> <!-- 各投稿のいいね数を表示 -->
-            <%= link_to comments_new_path(workout_id: workout.id), method: :get do %>
+            <%= @workout.like_users.count %> <!-- 各投稿のいいね数を表示 -->
+            
+            <%= link_to comments_new_path(id: @workout.id), method: :get do %>
               <i class="far fa-comment"></i>
             <% end %>
+            
+            <div class="workout-time">
+              <%= @workout.created_at %>
+            </div>
+            
           </div>
         </div>
       </div>
-    <% end %>
   </div>
 </div>

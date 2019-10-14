@@ -1,6 +1,8 @@
 class WorkoutsController < ApplicationController
   def index
-    @workouts = Workout.all.includes(:like_users)
+    @workouts = Workout.all.order(created_at: :desc)
+    
+    #@workouts = Workout.all.includes(:like_users)
     #指定したモデルのデータを一括で取得しキャッシュしておく
   end
 
@@ -9,6 +11,8 @@ class WorkoutsController < ApplicationController
   end
   
   def show
+    @workout = Workout.find_by(id: params[:id])
+      #idカラムがparams[:id]である投稿を取得している。
   end
   
   def create

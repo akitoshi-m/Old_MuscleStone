@@ -10,8 +10,8 @@
             </h2>
             
             <p class="workout-text">
-              <%#= link_to workout_path(workout_id: workout.id) do %>
-              <%= link_to "#" do %>
+              <%= link_to workout_path(id: workout.id) do %>
+              <%#= link_to "#" do %>
                 <%= workout.description %>
               <% end %>
             </p> 

@@ -19,7 +19,8 @@ Rails.application.routes.draw do
     #/workouts/:workout_id/comment/newのパスが使用できる
   end
 
-  get    'likes/index' #投稿一覧ページ
+  get    'likes/index' #いいね一覧ページ
+  
   post   '/likes', to: 'likes#create'  #いいね作成
   delete '/likes', to: 'likes#destroy' #いいね解除
   
