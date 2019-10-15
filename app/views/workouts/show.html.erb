@@ -30,6 +30,7 @@
             <div class="workout-time">
               <%= @workout.created_at %>
             </div>
+
             <div class="workout-menus">
               <%= link_to workout_path(id: @workout.id), method: :delete do %>
                 <div class="destroy-btn">削除</div>

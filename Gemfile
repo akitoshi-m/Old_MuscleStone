@@ -72,3 +72,4 @@ gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'font-awesome-rails'
 gem "carrierwave"
+gem 'rails-i18n'
