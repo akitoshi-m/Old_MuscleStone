@@ -21,7 +21,7 @@ class WorkoutsController < ApplicationController
     if @workout.save
       redirect_to workouts_path, success: "投稿に成功しました"
     else
-      flash.now[:danger] = "投稿に失敗しました"
+      flash.now[:danger] = "投稿は140字以内にしてください"
       render :new
     end
   end
