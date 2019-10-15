@@ -26,6 +26,20 @@ class WorkoutsController < ApplicationController
     end
   end
   
+  #def update 投稿編集機能(不使用)
+  #  @workout = Workout.find_by(id: params[:id])
+  #  @workout.content = params[:content]
+  #  @workout.save
+  #  redirect_to workouts_path, success: "投稿を編集しました"
+  #end
+  
+  def destroy
+    @workout = Workout.find_by(id: params[:id])
+    @workout.destroy
+    redirect_to workouts_path, success: "投稿を削除しました"
+  end
+  
+  
   private
   def workout_params
     params.require(:workout).permit(:image, :description)

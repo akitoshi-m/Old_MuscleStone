@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'menus/new'
   get 'comments/new'
   get 'workouts/new'
   get 'sessions/new'
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
     resources :comments
     #/workouts/:workout_id/comment/newのパスが使用できる
   end
+  resources :menus
 
   get    'likes/index' #いいね一覧ページ
   

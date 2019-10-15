@@ -6,13 +6,13 @@
     <div class="row">
       <div class="col-md-11 col-md-offset-1">
         <div class="user-icon">
-
+        <img src="<%= "/icons/#{@user.image_name}" %> ">
         </div>
         <%= link_to edit_user_path(current_user) do %>
           <div class="edit-btn">編集</div>
         <% end %>
         <%= link_to logout_path, method: :delete do %>
-          <div cladd="logout-btn">ログアウト</div>
+          <div class="logout-btn">ログアウト</div>
         <% end %>
         <div class="user-data">
           <p>名前：<%= @user.name %></p>
@@ -35,7 +35,7 @@
             <p class="training-menu">トレーニングメニュー</p>
             <p class="calender">カレンダー</p>
             <p class="graph">グラフ</p>
-            <%= link_to "#" do %> 
+            <%= link_to menus_path(current_user.id) do %> 
               <%= image_tag 'icons/f_dumbbell.jpg' %>
             <% end %>
             <%= link_to "#" do %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  use_id: 1
+  description: MyString
+  weight: 1
+  rep: 1
+  set: 1
+  title: MyString
+
+two:
+  use_id: 1
+  description: MyString
+  weight: 1
+  rep: 1
+  set: 1
+  title: MyString
