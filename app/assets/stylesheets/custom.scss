@@ -150,14 +150,23 @@ h1, h2 {
   }
 }
 
-.user-data-wrapper { //ユーザー詳細ページ
-  .user-heading {
+.user-top-wrapper { //ユーザー詳細ページのトップ
+  
+  text-align: center;
+  img {
+    //text-align: center;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
   }
+}
+
+.user-data-wrapper { 
   
   .menu-heading {
-    img { //アイコン
-      height: 300px;
+    img {
       width: 300px;
+      height: 300px;
     }
   }
 }

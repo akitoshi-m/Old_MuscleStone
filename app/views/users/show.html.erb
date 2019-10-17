@@ -2,11 +2,8 @@
 <h1>ユーザー詳細ページ</h1>
 <div class="user-top-wrapper">
   <div class="container">
-    
-    <div class="row">
-      <div class="col-md-11 col-md-offset-1">
         <div class="user-icon">
-        <img src="<%= "/icons/#{@user.image_name}" %> ">
+          <%= image_tag('icons/f_duck.jpg') %>
         </div>
         <%= link_to edit_user_path(current_user) do %>
           <div class="edit-btn">編集</div>
@@ -17,9 +14,6 @@
         <div class="user-data">
           <p>名前：<%= @user.name %></p>
         </div>
-        
-      </div>
-    </div>
   </div>
 </div>
 
