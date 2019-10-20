@@ -7,5 +7,6 @@ class CreateWorkouts < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+    add_index :workouts, [:user_id, :created_at]
   end
 end

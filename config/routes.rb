@@ -14,12 +14,18 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy' #Sessionを削除する
   
   resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :workouts
   resources :workouts do
     resources :comments
     #/workouts/:workout_id/comment/newのパスが使用できる
   end
   resources :menus
+  resources :relationships, only: [:create, :destroy]
 
   get    'likes/index' #いいね一覧ページ
   

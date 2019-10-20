@@ -1,0 +1,19 @@
+<!-- @userがnil出ない場合は何もせず、nilの場合は@userにcurrent_userを代入する -->
+<% @user ||= current_user %>
+<div class="stats">
+  <!-- フォローしているユーザーの情報 -->
+  <a href="<%= following_user_path(@user) %>">
+    <strong id="following" class="stat">
+      <%= @user.following.count %>
+    </strong>
+    following
+  </a>
+  <!-- フォローされているユーザーの情報 -->
+  <a href="<%= followers_user_path(@user) %>">
+    <strong id="followers" class="stat">
+      <%= @user.followers.count %>
+    </strong>
+    followers
+  </a>
+</div>
+
