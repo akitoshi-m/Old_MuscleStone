@@ -1,6 +1,7 @@
 <div class="users-index-wrapper">
   <div class="container">
     <h1 class="users-heading">ユーザー一覧</h1>
+    <%= paginate @users %>
     <% @users.each do |user| %>
       <div class="row">
   　　    <div class="col-md-6 col-md-offset-3">
@@ -15,5 +16,6 @@
         </div>
       </div>
     <% end %>
+    <%= paginate @users %>
   </div>
 </div>
