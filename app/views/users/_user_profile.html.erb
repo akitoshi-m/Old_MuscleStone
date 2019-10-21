@@ -3,19 +3,6 @@
 
 <div class="user-top-wrapper">
   <div class="container">
-    
-<% provide(:title, @title) %>
-<div class = "row">
-  <% provide(:title, @user.name) %>
-  <h1>
-    <%= gravatar_for @user %>
-    <%= @user.name %>
-    こんにちは
-  </h1>
-</div>
-    
-    
-    
     <div class="user-icon">
       <%= image_tag('icons/f_duck.jpg') %>
     </div>
@@ -28,6 +15,30 @@
 　　<section class="stats">
       <%= render 'shared/stats' %>
     </section>
+    <div class="status text-center">
+      <ul>
+        <li>
+          <div class="status-label">名前</div>
+          <div class="status-value"><%= user.name %></div>
+        </li>
+        <li>
+          <div class="status-label">身長</div>
+          <div class="status-value"><%= user.height %></div>
+        </li>
+        <li>
+          <div class="status-label">体重</div>
+          <div class="status-value"><%= user.weight %></div>
+        </li>
+      </ul>
+      <div class="status comment text-center ">
+        <ul>
+          <li>
+            <div class="status-label">自己紹介</div>
+            <div class="status-value"><%= user.comment %></div>
+          </li>
+        </ul>
+      </div>
+    </div>
     <%= render 'follow_form' if logged_in? %>
     <div class="user-data">
       <p>名前：<%= @user.name %></p>
