@@ -5,16 +5,46 @@
         <div class="col-md-6 col-md-offset-3">
           <h2 class="title">プロフィール編集</h2>
           <%= form_for @user do |f| %>
+            <%= f.hidden_field :password, :value => @user.password %>            
+            <%= f.hidden_field :password_confirmation, :value => @user.password_confirmation %>  
+            <!-- プロフィール画像編集 -->
+          
+            <!-- 名前編集 -->
             <div class="form-group">
-              <%= f.label :名前, class: 'text-brack' %>
+              <%= f.label :名前, class: 'text-black' %>
               <%= f.text_field :name, class: 'form-control' %>
             </div>
+            <!-- メールアドレス編集 -->
             <div class="form-group">
-              <%= f.label :email, class: 'text-brack' %>
+              <%= f.label :メールアドレス, class: 'text-black' %>
               <%= f.text_field :email, class: 'form-control' %>
             </div>
-
-          　<%= f.submit "保存", class: 'btn-block' %>
+            <!-- 身長編集 -->
+            <div class="form-group row">
+              <%= f.label :height, '身長 ', class:'col-md-3 col-form-label' %>
+              <div class="col-md-1">
+                <%= f.select :height, [['-', '-'], ['150cm未満', '150cm未満'], ['150〜155cm', '150〜155cm'], ['155〜160cm', '155〜160cm'], ['160〜165cm', '160〜165cm'], ['165〜170cm', '165〜170cm'], ['170〜175cm', '170〜175cm'], ['175〜180cm', '175〜180cm'], ['180〜185cm', '180〜185cm'], ['185〜190cm', '185〜190cm'], ['190〜195cm', '190〜195cm'], ['195〜200cm', '195〜200cm'] ]%>
+              </div>
+            </div>
+            <!-- 体重編集 -->
+            <div class="form-group row">
+              <%= f.label :weight, '体重 ', class:'col-md-3 col-form-label' %>
+              <div class="col-md-1">
+                <%= f.select :weight, [['-', '-'], ['45kg未満', '45kg未満'], ['45〜50kg', '45〜50kg'], ['50〜55kg', '50〜55kg'], ['55〜60kg', '55〜60kg'], ['60〜65kg', '60〜65kg'], ['65〜70kg', '65〜70kg'], ['70〜75kg', '70〜75kg'], ['75〜80kg', '75〜80kg'], ['85〜90-kg', '85〜90-kg'], ['90〜95kg', '90〜95kg'], ['95〜100kg', '95〜100kg'], ['100kg超', '100kg超'] ] %>
+              </div>
+            </div>
+            <!-- 自己紹介 -->
+            <div class="form-group row">
+              <%= f.label :comment, '自己紹介(255文字まで) ', class:'col-md-3 col-form-label' %>
+              <div class="col-md-9">
+                <%= f.text_area :comment, class: "form-control", rows: "3", 
+                  placeholder:"自己紹介記入欄
+(例文)筋トレはじめました！よろしくお願いします！"
+                %>
+              </div>
+            <!-- プロフィール更新 -->  
+            </div>
+          　<%= f.submit "更新", class: 'btn-block' %>
           <% end %>
         </div>
       </div>

@@ -1,66 +1,6 @@
-<span><i class="fas fa-arrow-left"></i>投稿一覧へ戻る</span>
-<h1>ユーザー詳細ページ</h1>
-<div class="user-top-wrapper">
-  <div class="container">
-    <div class="user-icon">
-      <%= image_tag('icons/f_duck.jpg') %>
-    </div>
-    <%= link_to edit_user_path(current_user) do %>
-      <div class="edit-btn">編集</div>
-    <% end %>
-    <%= link_to logout_path, method: :delete do %>
-      <div class="logout-btn">ログアウト</div>
-    <% end %>
-　　<section class="stats">
-      <%= render 'shared/stats' %>
-    </section>
-    <%= render 'follow_form' if logged_in? %>
-    <div class="user-data">
-      <p>名前：<%= @user.name %></p>
-    </div>
-  </div>
-</div>
+<!-- ユーザープロフィール -->
+<%= render 'users/user_profile', user: @user %>
 
-<div class="user-data-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="user-heading">
-        <div class="col-md-11 col-md-offset-1">
-          <p>ここにマイデータという文字表記をする</p>
-        </div>
-        <div class="menu-heading">
-          <div class="col-md-11 col-md-offset-1">
-            <p class="training-menu">トレーニングメニュー</p>
-            <p class="calender">カレンダー</p>
-            <p class="graph">グラフ</p>
-            <%= link_to menus_path(current_user.id) do %> 
-              <%= image_tag 'icons/f_dumbbell.jpg' %>
-            <% end %>
-            <%= link_to "#" do %>
-              <%= image_tag 'icons/f_note.jpg' %>
-            <% end %>
-            <%= link_to "#" do %>
-              <%= image_tag 'icons/f_graph.jpg' %>
-            <% end %>
-            <%= line_chart @chart_data, width: "800px", height: "500px" %>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- ユーザー投稿一覧 -->
 
-<div class="user-index-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <div class="user-index-wrapper">
-          <p class="workout-index">
-            <h2>ここにユーザーの投稿を一覧表示する</h2>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
  

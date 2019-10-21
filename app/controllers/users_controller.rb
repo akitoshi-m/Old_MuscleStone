@@ -28,11 +28,14 @@ class UsersController < ApplicationController
   end
   
   def update
+    #attributes 対象となるカラムだけを更新する　※バリデーションが走る
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = 'ユーザー編集が完了しました'
       redirect_to user_path(@user)
     else
+      binding.pry
+      flash.now[:danger] = 'ユーザー編集に失敗しました'
       render 'edit'
     end
   end
@@ -40,19 +43,23 @@ class UsersController < ApplicationController
   def following
     @title = "Following"
     @user  = User.find(params[:id])
-    @users = @user.following.paginate(page: params[:page])
+    @users = @user.following.page(params[:page]).per(25)
     render 'show_follow'
   end
 
   def followers
     @title = "Followers"
     @user  = User.find(params[:id])
-    @users = @user.followers.paginate(page: params[:page])
+    @users = @user.followers.page(params[:page]).per(25)
     render 'show_follow'
-  end
+  end  
   
   private
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :user_name)
+    params.require(:user).permit(:name, :password, :password_confirmation, :height, :weight, :comment)
   end
+  
+  # def user_update_params
+  #   params.require(:user).permit(:name, :email, :height, :weight, :comment)
+  # end
 end
