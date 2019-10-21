@@ -1,11 +1,17 @@
-.footer li {
-  font-size:15px;
-  color: #fff;
-  list-style: none;
-}
-
 h1, h2 {
   font-weight: bold;
+}
+
+.text-red {
+  color: #fff;
+  text-shadow: 2px 2px 1px #000,
+    -2px 2px 1px #000,
+    2px -2px 1px #000,
+    -2px -2px 1px #000;
+}
+
+.sub-title {
+  font-size: 30px;
 }
 
 .text-white {
@@ -23,14 +29,15 @@ h1, h2 {
   background-color: rgba(0,0,0,0.0);
   
   &:hover {
-    color: #fff;
+    color: #000;
+    background-color: #fff;
   }
 }
 
 .top-wrapper {
   width: 100vw;
-  height: 110vh;
-  background-image: url('background-training.jpg');
+  height: 100vh;
+  background-image: url('training.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -39,7 +46,7 @@ h1, h2 {
 }
 
 .top-container {
-  padding-top: 220px;
+  padding-top: 130px;
   h1 {
     font-size: 56px;
     margin-bottom: 20px;

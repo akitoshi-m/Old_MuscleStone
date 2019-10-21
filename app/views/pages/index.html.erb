@@ -3,29 +3,17 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="title">
-          <h1 class="text-white">MuscleStone</h1>
-        </div>
-        <p class="text-white sub-title">常に高みを目指す貴方へ向けた筋トレ管理アプリです。</p>
-        <div class="col-md-3">
-          <%= link_to "アカウント登録", '/users/new', class: 'btn btn-block btn-white' %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to "ログイン", 'sessions/new', class: 'btn btn-block btn-white' %>
-        </div>
-        <div class="col-md-3">
-          <%= link_to "twitterアカウントで登録&ログイン", '#', class: 'btn btn-block btn-white' %>
+          <h1 class="text-red">MuscleStone</h1>
         </div>
       </div>
-    </div>
-  </div>
-</div> 
-  <div class="footer">
-    <div class="footer-list">
-      <ul>
-        <li>フッター要素1</li>
-        <li>フッター要素2</li>
-        <li>フッター要素3</li>
-      </ul>
+      <div class="col-md-8 col-md-offset-2">
+        <p class="text-red sub-title">常に高みを目指す貴方へ向けた筋トレ管理アプリです。</p>
+      </div>
+      <div class="col-md-6 col-md-offset-3">
+        <%= link_to "アカウント登録", '/users/new',  class: 'btn btn-block btn-white' %>
+        <%= link_to "ログイン", 'sessions/new',      class: 'btn btn-block btn-white' %>
+        <%= link_to "テストユーザーでログイン", '#', class: 'btn btn-block btn-white' %>
+      </div>
     </div>
   </div>
 </div>

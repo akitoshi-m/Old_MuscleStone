@@ -2,22 +2,22 @@
 <h1>ユーザー詳細ページ</h1>
 <div class="user-top-wrapper">
   <div class="container">
-        <div class="user-icon">
-          <%= image_tag('icons/f_duck.jpg') %>
-        </div>
-        <%= link_to edit_user_path(current_user) do %>
-          <div class="edit-btn">編集</div>
-        <% end %>
-        <%= link_to logout_path, method: :delete do %>
-          <div class="logout-btn">ログアウト</div>
-        <% end %>
-　　　　<section class="stats">
-          <%= render 'shared/stats' %>
-        </section>
-        <%= render 'follow_form' if logged_in? %>
-        <div class="user-data">
-          <p>名前：<%= @user.name %></p>
-        </div>
+    <div class="user-icon">
+      <%= image_tag('icons/f_duck.jpg') %>
+    </div>
+    <%= link_to edit_user_path(current_user) do %>
+      <div class="edit-btn">編集</div>
+    <% end %>
+    <%= link_to logout_path, method: :delete do %>
+      <div class="logout-btn">ログアウト</div>
+    <% end %>
+　　<section class="stats">
+      <%= render 'shared/stats' %>
+    </section>
+    <%= render 'follow_form' if logged_in? %>
+    <div class="user-data">
+      <p>名前：<%= @user.name %></p>
+    </div>
   </div>
 </div>
 
