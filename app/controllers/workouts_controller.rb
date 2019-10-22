@@ -1,13 +1,13 @@
 class WorkoutsController < ApplicationController
+  def new
+    @workout = Workout.new
+  end
+
   def index
     @workouts = Workout.all.order(created_at: :desc).page(params[:page]).per(25)
     
     #@workouts = Workout.all.includes(:like_users)
     #指定したモデルのデータを一括で取得しキャッシュしておく
-  end
-
-  def new
-    @workout = Workout.new
   end
   
   def show

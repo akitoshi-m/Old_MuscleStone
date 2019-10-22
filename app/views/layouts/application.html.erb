@@ -22,9 +22,10 @@
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
-    
+    <!-- ナビゲーションバー -->
     <nav class="navbar navbar-default navbar-fixed navbar-transparent">
       <div class="container">
+        <!-- ログインの有無で条件分岐 -->
         <% if logged_in? %>
           <ul class="nav navbar-nav navbar-left">
             <li>
@@ -70,6 +71,7 @@
     <%= yield %>
     
     <script>
+      <!-- アラートを5秒で消す -->
       $(function(){
         $(".alert").fadeOut(5000);
       });

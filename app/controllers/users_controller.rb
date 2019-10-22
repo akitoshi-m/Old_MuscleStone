@@ -34,7 +34,6 @@ class UsersController < ApplicationController
       flash[:success] = 'ユーザー編集が完了しました'
       redirect_to user_path(@user)
     else
-      binding.pry
       flash.now[:danger] = 'ユーザー編集に失敗しました'
       render 'edit'
     end
