@@ -1,24 +1,25 @@
-# README
+# MuscleStone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+「筋トレで成果を出したい方」に向けた筋トレのメニュー管理や体重管理、トレーニングに関しての相互交流ができるサービスです。
 
-Things you may want to cover:
+# 機能一覧
+・記事投稿機能
+・コメント追加機能
+・いいね機能
+・フォロー機能
+・認証機能
+・ページネーション機能
 
-* Ruby version
 
-* System dependencies
+# 使用技術
+・インフラ（AWS/Heroku)
+・画像アップロード（）
+・ページネーション（kaminari）
+・パンくずリスト
+・デザイン（Bootstrap）
 
-* Configuration
+# 開発環境
+・言語　Ruby
+・フレームワーク　Ruby on Rails
+・開発環境　Cloud9
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
