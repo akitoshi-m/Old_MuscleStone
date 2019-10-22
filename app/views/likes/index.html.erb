@@ -1,14 +1,17 @@
-<div class="workout-index-wrapper">
+<div class="likes-index-wrapper">
   <div class="container">
-    <h1 class="users-heading">いいね一覧</h1>
-    <% @like_workouts.each do |workout| %>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="workout-index-single">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h1 class="likes-heading">いいね一覧</h1>
+          <% @like_workouts.each do |workout| %>
+            <div class="like_workouts-index">
             <h2 class="workout-author">
               <%= workout.user.name %>
             </h2>
             <%#= image_tag workout.image.url %>
+            <p class='workout-text'>
+              <%= workout.description %>
+            </p>
             <% if !workout.like_users.include?(current_user) %>
               <%= link_to likes_path(workout_id: workout.id), method: :post do %>
                 <i class="far fa-heart like-btn" ></i>
@@ -18,11 +21,8 @@
                 <i class="fas fa-heart unlike-btn"></i>
               <% end %>
             <% end %>
-            <%= workout.like_users.count %> <!-- 各投稿のいいね数を表示 -->
+            <%= workout.like_users.count %>
             <i class="far fa-comment", class: 'workout-index-icon'></i>
-            <p class='workout-text'>
-              <%= workout.description %>
-            </p>
           </div>
         </div>
       </div>
