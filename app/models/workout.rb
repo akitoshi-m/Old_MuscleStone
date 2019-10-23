@@ -5,7 +5,7 @@ class Workout < ApplicationRecord
   # validates :image, presence: true
   
   belongs_to :user
-  
+  # アップローダーを追加
   mount_uploader :image, ImageUploader
   
   has_many :likes

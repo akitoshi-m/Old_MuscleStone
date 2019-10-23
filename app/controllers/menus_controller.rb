@@ -8,7 +8,7 @@ class MenusController < ApplicationController
   end
   
   def create
-    @menu = current_user.menus.new(menu_params)
+    @menu = Menu.new(menu_params)
     
     if @menu.save
       redirect_to menus_path, success: "トレーニングメニューを作成しました"

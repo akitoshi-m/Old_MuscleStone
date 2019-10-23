@@ -12,6 +12,10 @@
                 <%= workout.user.name %>
               <% end %>
             </h2>
+            <!-- 画像投稿があれば表示 -->
+            <p class="workout-">
+              <%= image_tag workout.image.url if workout.image? %>
+            </p> 
             <!-- 投稿の内容を表示 -->
             <p class="workout-text">
               <%= link_to workout_path(id: workout.id) do %>

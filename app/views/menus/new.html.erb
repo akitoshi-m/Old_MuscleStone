@@ -28,17 +28,13 @@
             </div>
             <!-- セット数 -->
             <div class="form-group row">
-              <%= f.label :体重, class:'col-md-3 col-form-label' %>
-              <div class="col-md-1">
-                <%= f.text_field :set, class: 'form-control' %>
-              </div>
+              <%= f.label :セット数, class:'col-md-3 col-form-label' %>
+              <%= f.text_field :set, class: 'form-control' %>
             </div>
             <!-- コメント -->
             <div class="form-group row">
               <%= f.label :comment, 'コメント', class:'col-md-3 col-form-label' %>
-              <div class="col-md-9">
-                <%= f.text_area :comment, class: "form-control", rows: "3" %>
-              </div>
+              <%= f.text_area :comment, class: "form-control", rows: "3" %>
             </div>
             <!-- トレーニングメニュー追加ボタン --> 
           　<%= f.submit "追加", class: 'btn-block' %>

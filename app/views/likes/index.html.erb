@@ -4,7 +4,7 @@
       <div class="col-md-8 col-md-offset-2">
         <h1 class="likes-heading">いいね一覧</h1>
           <% @like_workouts.each do |workout| %>
-            <div class="like_workouts-index">
+          <div class="like_workouts-index">
             <h2 class="workout-author">
               <%= workout.user.name %>
             </h2>
@@ -24,8 +24,8 @@
             <%= workout.like_users.count %>
             <i class="far fa-comment", class: 'workout-index-icon'></i>
           </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>

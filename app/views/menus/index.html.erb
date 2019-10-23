@@ -3,20 +3,42 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <h1 class="menu-heading">○○さんのトレーニングメニュー</h1>
+        <div class="add-training">
+          <%= link_to new_menu_path do %>
+            <p>トレーニングメニュー追加</p>
+          <% end %>
+        </div>
         <% @menus.each do |menu| %>
+          <!-- トレーニングメニューを表示 -->
           <div class="menu-index">
-            <!-- タイトル -->
-            <h2 class="training-name">
-              <%= link_to "#" do %>
-                <%= "#" %>
-              <% end %>
-            </h2>
-            <!-- トレーニングメニューを表示 -->
-            <p class="training-menu">
-              <%= link_to "#" do %>
-                <%= "#" %>
-              <% end %>
-            </p> 
+            <!-- 部位 -->
+            <p class="training-name">
+              <%= menu.part %>
+            </p>
+            <!-- 名称 -->
+            <p class="training_name">
+              <%= menu.training_name %>
+            </p>
+            <!-- 重量 -->
+            <p class="weight">
+              <%= menu.weight %>
+            </p>
+            <!-- 回数 -->
+            <p class="rep">
+              <%= menu.rep %>
+            </p>
+            <!-- 回数 -->
+            <p class="rep">
+              <%= menu.rep %>
+            </p>
+            <!-- セット数 -->
+            <p class="set">
+              <%= menu.set %>
+            </p>
+            <!-- コメント -->
+            <p class="comment">
+              <%= menu.comment %>
+            </p>
           </div>
         <% end %>    
       </div>
